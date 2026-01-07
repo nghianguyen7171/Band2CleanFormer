@@ -1,8 +1,41 @@
+# Data files
 *.npy
 *.npz
 *.mat
+*.zip
+
+# Model checkpoints
 *.pt
 *.pth
-*.zip
+checkpoints/
+results/
+
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.log
+*.pkl
+
+# Jupyter
 .ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+venv/
+env/
+ENV/
+.venv

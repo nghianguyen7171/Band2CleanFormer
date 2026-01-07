@@ -1,0 +1,42 @@
+# Configuration file for Band2CleanFormer training
+
+# Data paths (update these to point to your dataset)
+data:
+  eog:
+    clean_dir: "/path/to/eog/clean/bands"
+    contaminated_dir: "/path/to/eog/contaminated/bands"
+  emg:
+    clean_dir: "/path/to/emg/clean/bands"
+    contaminated_dir: "/path/to/emg/contaminated/bands"
+
+# Model hyperparameters
+model:
+  seq_len_eog: 512      # Sequence length for EOG (256 Hz sampling)
+  seq_len_emg: 1024    # Sequence length for EMG (512 Hz sampling)
+  input_channels: 6     # Number of frequency bands
+  model_dim: 64         # Model dimension
+  num_heads: 4          # Number of attention heads
+  num_layers: 2         # Number of transformer layers
+
+# Training hyperparameters
+training:
+  batch_size: 128
+  learning_rate: 0.001
+  epochs_eog: 200
+  epochs_emg: 100
+  patience: 10          # Early stopping patience
+  min_delta: 1e-4       # Minimum change for early stopping
+
+# Paths for saving models and results
+paths:
+  checkpoint_dir: "checkpoints"
+  results_dir: "results"
+  eog_model_path: "checkpoints/band2cleanformer_eog.pth"
+  emg_model_path: "checkpoints/band2cleanformer_emg.pth"
+
+# Device settings
+device: "cuda"  # Options: "cuda" or "cpu"
+
+# Random seed for reproducibility
+random_seed: 42
+
