@@ -131,6 +131,16 @@ Band2CleanFormer achieves superior performance on EOG-contaminated EEG, with cor
 
 For EMG-contaminated EEG, Band2CleanFormer maintains correlation coefficients above 0.95, demonstrating robust artifact suppression while preserving neural oscillations.
 
+### Temporal and Spectral Difference Analysis
+
+![Temporal Difference](assets/temporal_diff_eog.png)
+
+The temporal error analysis shows that Band2CleanFormer achieves substantially reduced per-sample reconstruction error during artifact-dominated periods while maintaining low error in clean segments, demonstrating precise temporal artifact suppression without oversmoothing.
+
+![Spectral Difference](assets/spectral_diff_eog.png)
+
+The spectral difference analysis reveals that Band2CleanFormer achieves lower frequency-domain deviation in artifact-overlapping bands while preserving spectral structure outside these regions, confirming targeted frequency-aware artifact suppression.
+
 ## Project Structure
 
 ```
